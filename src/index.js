@@ -7,7 +7,7 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/veiviser-test">
     <App />
   </BrowserRouter>,
   document.getElementById("root")
