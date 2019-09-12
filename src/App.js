@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Switch, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Switch, Route, withRouter } from "react-router-dom";
 
 import Header from "./components/header/header.component";
 import Footer from "./components/footer/footer.component";
@@ -23,12 +23,16 @@ const HINDRANCES_INITAL_STATE = hindranceList.map(hindrance => {
   };
 });
 
-const App = () => {
+const App = withRouter(({ location }) => {
   const [isHindranceFirst, setHindranceFirst] = useState(true);
   const [userDesire, setDesire] = useState(DESIRE_INTITIAL_STATE);
   const [userHindrances, setHindrances] = useState(
     HINDRANCES_INITAL_STATE
   );
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   const resetState = () => {
     setDesire(DESIRE_INTITIAL_STATE);
@@ -36,7 +40,6 @@ const App = () => {
   };
 
   const handleDesireChange = event => {
-    console.log("");
     setDesire(desires[event.target.value]);
   };
 
@@ -146,6 +149,6 @@ const App = () => {
       <Footer onTestModeChange={handleTestModeChange} />
     </React.Fragment>
   );
-};
+});
 
 export default App;

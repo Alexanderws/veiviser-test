@@ -2,7 +2,7 @@
   "name": "veiviser-test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://alexanderws.github.io/veiviser-test",
+  "homepage": "http://alexanderws.github.io/veiviser-test/",
   "dependencies": {
     "@material-ui/core": "^4.4.1",
     "node-sass": "^4.12.0",
