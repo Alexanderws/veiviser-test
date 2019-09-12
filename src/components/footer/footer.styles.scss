@@ -1,0 +1,15 @@
+.footer {
+    display: flex;
+    height: 40px;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    background-color: #EEE;
+
+    .button {
+        color: #000;
+        opacity: 0.3;
+        padding: 4px;
+        font-weight: 500;
+    }
+}

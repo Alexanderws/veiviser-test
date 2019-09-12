@@ -1,0 +1,17 @@
+.service-item {
+    background-color: #C7F6C9;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+
+    h4 {
+        font-weight: 500;
+        font-size: 1.25rem;
+        margin: 0 0 12px 0;
+    }
+
+    span {
+        font-size: 1rem;
+    }
+}

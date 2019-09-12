@@ -1,0 +1,36 @@
+$oslo-darkblue: #2A2859;
+$oslo-limegreen: #43F8B6;
+
+.nav-button {
+    height: 60px;
+    padding: 0 20px;
+    min-width: 120px;
+    background-color: $oslo-limegreen;
+    color: $oslo-darkblue;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    font-weight: 500;
+    justify-content: center;
+    font-size: 1.25rem;
+
+    &:hover {
+        color: $oslo-limegreen;
+        background-color: $oslo-darkblue;
+    }
+
+    &.wide {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    &.secondary {
+        background-color: #FFF;
+        border: 1px solid $oslo-darkblue;
+
+        &:hover {
+            color: #FFF;
+            background-color: $oslo-darkblue;
+        }
+    }
+}
