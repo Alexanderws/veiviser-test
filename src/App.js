@@ -13,7 +13,7 @@ import { getElligibleServices } from "./utils/service-recommendation";
 import { hindranceList } from "./store/hindrance.data";
 import "./App.css";
 
-const DESIRE_INTITIAL_STATE = desires.kleMeg.id;
+const DESIRE_INTITIAL_STATE = desires.kleMeg;
 const HINDRANCES_INITAL_STATE = hindranceList.map(hindrance => {
   return {
     id: hindrance.id,
@@ -36,7 +36,8 @@ const App = () => {
   };
 
   const handleDesireChange = event => {
-    setDesire(event.target.value);
+    console.log("");
+    setDesire(desires[event.target.value]);
   };
 
   const handleDesireLeave = () => {
@@ -47,10 +48,7 @@ const App = () => {
     if (!isHindranceFirst) {
       setHindrances(prevState => {
         return prevState.map(hindrance => {
-          console.log("userDesire: ", userDesire);
-          console.log("desires: ", desires);
-          console.log("desires.userDesire: ", desires.userDesire);
-          const relatedHindrances = desires[userDesire].hindrances;
+          const relatedHindrances = userDesire.hindrances;
 
           if (relatedHindrances.includes(hindrance.id)) {
             return { ...hindrance, disabled: false };
@@ -110,7 +108,6 @@ const App = () => {
             <DesirePage
               nextPath={getNextPath("desire")}
               activeDesire={userDesire}
-              isHindranceFirst={isHindranceFirst}
               onDesireLeave={handleDesireLeave}
               onDesireChange={handleDesireChange}
               {...props}
@@ -122,7 +119,9 @@ const App = () => {
           path="/hindrance"
           render={props => (
             <HindrancePage
+              userDesire={userDesire}
               nextPath={getNextPath("hindrance")}
+              isHindranceFirst={isHindranceFirst}
               hindrances={userHindrances}
               onHindranceChange={handleHindranceChange}
               {...props}

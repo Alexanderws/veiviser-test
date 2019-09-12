@@ -25,7 +25,7 @@ const DesirePage = ({
           <RadioGroup
             aria-label="Ønske"
             name="ønske"
-            value={activeDesire}
+            value={activeDesire.id}
             onChange={onDesireChange}
           >
             {Object.keys(desires).map(key => {
