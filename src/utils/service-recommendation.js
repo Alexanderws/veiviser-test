@@ -5,7 +5,7 @@ import { serviceList } from "../store/service.data";
 // first find elligible services meeting the users desire
 // get the base score (the rating for the desire)
 // and add the limitation score (meeting the users limitations)
-export const getElligibleServices = (desire, limitations) => {
+export const getElligibleServices = (desireId, limitations) => {
   const selectedLimitations = limitations.filter(limit => {
     return limit.selected;
   });
@@ -13,8 +13,8 @@ export const getElligibleServices = (desire, limitations) => {
   const formattedServices = serviceList
     .map(service => {
       let baseScore = 0;
-      if (service.desireRatings[desire]) {
-        baseScore = service.desireRatings[desire];
+      if (service.desireRatings[desireId]) {
+        baseScore = service.desireRatings[desireId];
       }
       const limitationScore = calculateScore(
         service,
@@ -26,7 +26,7 @@ export const getElligibleServices = (desire, limitations) => {
       };
     })
     .map(service => {
-      let isElligible = desire in service.desireRatings;
+      let isElligible = desireId in service.desireRatings;
       if (isElligible) {
         selectedLimitations.forEach(limit => {
           if (!service.limitationRatings[limit.id]) {
@@ -39,35 +39,6 @@ export const getElligibleServices = (desire, limitations) => {
         name: service.name,
         description: service.description,
         elligible: isElligible
-      };
-    });
-
-  const services = serviceList
-    .filter(service => {
-      return desire in service.desireRatings;
-    })
-    .filter(service => {
-      let meetsLimits = true;
-      selectedLimitations.forEach(limit => {
-        if (!service.limitationRatings[limit.id]) {
-          meetsLimits = false;
-        }
-      });
-      return meetsLimits;
-    })
-    .map(service => {
-      let baseScore = 0;
-      if (service.desireRatings[desire]) {
-        baseScore = service.desireRatings[desire];
-      }
-      const limitationScore = calculateScore(
-        service,
-        selectedLimitations
-      );
-      return {
-        name: service.name,
-        description: service.description,
-        score: Math.round((limitationScore + baseScore) * 10) / 10
       };
     });
 

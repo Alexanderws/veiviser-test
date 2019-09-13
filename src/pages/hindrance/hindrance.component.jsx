@@ -8,7 +8,6 @@ import {
 import NavButton from "../../components/nav-button/nav-button.component";
 
 import "./hindrance.styles.scss";
-import { desires } from "../../store/desire.data";
 
 const HindrancePage = ({
   hindrances,

@@ -31,7 +31,7 @@ const App = withRouter(({ location }) => {
   );
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 40);
   }, [location.pathname]);
 
   const resetState = () => {
@@ -138,7 +138,7 @@ const App = withRouter(({ location }) => {
             <ResultPage
               nextPath="/desire"
               serviceList={getElligibleServices(
-                userDesire,
+                userDesire.id,
                 userHindrances
               )}
               {...props}
