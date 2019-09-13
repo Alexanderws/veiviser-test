@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/veiviser-test/static/css/main.5b819e98.chunk.css",
-    "main.js": "/veiviser-test/static/js/main.69d0488c.chunk.js",
-    "main.js.map": "/veiviser-test/static/js/main.69d0488c.chunk.js.map",
+    "main.js": "/veiviser-test/static/js/main.5c7d491e.chunk.js",
+    "main.js.map": "/veiviser-test/static/js/main.5c7d491e.chunk.js.map",
     "runtime~main.js": "/veiviser-test/static/js/runtime~main.f5bc01ef.js",
     "runtime~main.js.map": "/veiviser-test/static/js/runtime~main.f5bc01ef.js.map",
     "static/js/2.73ef36ae.chunk.js": "/veiviser-test/static/js/2.73ef36ae.chunk.js",
     "static/js/2.73ef36ae.chunk.js.map": "/veiviser-test/static/js/2.73ef36ae.chunk.js.map",
     "index.html": "/veiviser-test/index.html",
-    "precache-manifest.429b7f43f5658c7ed4bd1f41278bc934.js": "/veiviser-test/precache-manifest.429b7f43f5658c7ed4bd1f41278bc934.js",
+    "precache-manifest.67d34e0b289684a4ed83ad79e428c797.js": "/veiviser-test/precache-manifest.67d34e0b289684a4ed83ad79e428c797.js",
     "service-worker.js": "/veiviser-test/service-worker.js",
     "static/css/main.5b819e98.chunk.css.map": "/veiviser-test/static/css/main.5b819e98.chunk.css.map"
   }
