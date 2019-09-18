@@ -88,6 +88,8 @@ const App = withRouter(({ location }) => {
         return isHindranceFirst ? "/result" : "/hindrance";
       case "hindrance":
         return isHindranceFirst ? "/desire" : "/result";
+      case "result":
+        return isHindranceFirst ? "/hindrance" : "/desire";
       default:
         return "/";
     }
@@ -136,7 +138,7 @@ const App = withRouter(({ location }) => {
           path="/result"
           render={props => (
             <ResultPage
-              nextPath="/desire"
+              nextPath={getNextPath("result")}
               serviceList={getElligibleServices(
                 userDesire.id,
                 userHindrances

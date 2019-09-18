@@ -20,6 +20,9 @@ const DesirePage = ({
   return (
     <div className="page-root">
       <h2>Hva er viktig for deg å oppnå i hverdagen?</h2>
+      <span className="page-description">
+        Du kan velge andre ønsker senere.
+      </span>
       <div className="form-column">
         <FormControl>
           <RadioGroup

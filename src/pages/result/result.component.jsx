@@ -5,7 +5,7 @@ import NavButton from "../../components/nav-button/nav-button.component";
 
 import "./result.styles.scss";
 
-const ResultPage = ({ serviceList, history }) => {
+const ResultPage = ({ nextPath, serviceList, history }) => {
   let [isShowingAllServices, setIsShowingAllServices] = useState(false);
 
   const handleShowAllClicked = () => {
@@ -43,8 +43,8 @@ const ResultPage = ({ serviceList, history }) => {
         </div>
       )}
       <div className="button-row">
-        <NavButton wide onClick={() => history.push("/")}>
-          Start på nytt
+        <NavButton wide onClick={() => history.push(nextPath)}>
+          Velg nytt mål
         </NavButton>
       </div>
     </div>
