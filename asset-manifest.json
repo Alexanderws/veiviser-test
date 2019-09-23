@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/veiviser-test/static/css/main.70dc7b89.chunk.css",
-    "main.js": "/veiviser-test/static/js/main.e48095f4.chunk.js",
-    "main.js.map": "/veiviser-test/static/js/main.e48095f4.chunk.js.map",
+    "main.css": "/veiviser-test/static/css/main.3ca13d84.chunk.css",
+    "main.js": "/veiviser-test/static/js/main.1ed0bc8b.chunk.js",
+    "main.js.map": "/veiviser-test/static/js/main.1ed0bc8b.chunk.js.map",
     "runtime~main.js": "/veiviser-test/static/js/runtime~main.f5bc01ef.js",
     "runtime~main.js.map": "/veiviser-test/static/js/runtime~main.f5bc01ef.js.map",
-    "static/js/2.a76d9d53.chunk.js": "/veiviser-test/static/js/2.a76d9d53.chunk.js",
-    "static/js/2.a76d9d53.chunk.js.map": "/veiviser-test/static/js/2.a76d9d53.chunk.js.map",
+    "static/js/2.befad4e2.chunk.js": "/veiviser-test/static/js/2.befad4e2.chunk.js",
+    "static/js/2.befad4e2.chunk.js.map": "/veiviser-test/static/js/2.befad4e2.chunk.js.map",
     "index.html": "/veiviser-test/index.html",
-    "precache-manifest.76b088d88e986f4c3a80de6f993ef65a.js": "/veiviser-test/precache-manifest.76b088d88e986f4c3a80de6f993ef65a.js",
+    "precache-manifest.946c07b494d01b53f5e6bbd01b3eb871.js": "/veiviser-test/precache-manifest.946c07b494d01b53f5e6bbd01b3eb871.js",
     "service-worker.js": "/veiviser-test/service-worker.js",
-    "static/css/main.70dc7b89.chunk.css.map": "/veiviser-test/static/css/main.70dc7b89.chunk.css.map",
+    "static/css/main.3ca13d84.chunk.css.map": "/veiviser-test/static/css/main.3ca13d84.chunk.css.map",
     "static/media/chevron-right.f9f1a7e0.svg": "/veiviser-test/static/media/chevron-right.f9f1a7e0.svg"
   }
 }
