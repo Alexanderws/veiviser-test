@@ -110,6 +110,7 @@ const App = withRouter(({ location }) => {
           path="/result"
           render={props => (
             <ResultPage
+              userDesire={userDesire}
               nextPath={"goal"}
               serviceList={getElligibleServices(
                 userDesire.id,

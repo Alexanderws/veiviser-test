@@ -18,9 +18,10 @@ const HindrancePage = ({
 }) => {
   return (
     <div className="page-root">
-      <h2>{`${"Er det noe som gjør det vanskelig å " +
-        userDesire.textDefinite +
-        "?"}`}</h2>
+      <h2>
+        Er det noe som gjør det vanskelig å{" "}
+        <span className="t-italic">{userDesire.textDefinite}?</span>
+      </h2>
 
       <div className="form-column">
         <FormControl>

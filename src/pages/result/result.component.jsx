@@ -5,7 +5,7 @@ import NavButton from "../../components/nav-button/nav-button.component";
 
 import "./result.styles.scss";
 
-const ResultPage = ({ nextPath, serviceList, history }) => {
+const ResultPage = ({ nextPath, userDesire, serviceList, history }) => {
   let [isShowingAllServices, setIsShowingAllServices] = useState(false);
 
   const handleShowAllClicked = () => {
@@ -14,7 +14,10 @@ const ResultPage = ({ nextPath, serviceList, history }) => {
 
   return (
     <div className="page-root">
-      <h2>Følgende tilbud kan passe for deg:</h2>
+      <h2>
+        Følgende tilbud kan kanskje hjelpe deg med å{" "}
+        <span className="t-italic">{userDesire.textDefinite}</span>
+      </h2>
       <div className="service-list">
         {serviceList.length ? (
           isShowingAllServices ? (
