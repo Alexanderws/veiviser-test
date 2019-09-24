@@ -1,6 +1,6 @@
 import { Hindrances } from "./hindrance.data";
 
-const DESIRE = Object.freeze({
+const GOAL = Object.freeze({
   kleMeg: "kleMeg",
   lageMat: "lageMat",
   vaskeMeg: "vaskeMeg",
@@ -17,9 +17,9 @@ const DESIRE = Object.freeze({
   sosialisere: "sosialisere"
 });
 
-export const desires = {
-  [DESIRE.kleMeg]: {
-    id: DESIRE.kleMeg,
+export const goals = {
+  [GOAL.kleMeg]: {
+    id: GOAL.kleMeg,
     text: "Kle meg",
     textDefinite: "kle deg",
     hindrances: [
@@ -30,8 +30,8 @@ export const desires = {
       Hindrances.syn.id
     ]
   },
-  [DESIRE.lageMat]: {
-    id: DESIRE.lageMat,
+  [GOAL.lageMat]: {
+    id: GOAL.lageMat,
     text: "Lage mat",
     textDefinite: "lage mat",
     hindrances: [
@@ -41,8 +41,8 @@ export const desires = {
       Hindrances.syn.id
     ]
   },
-  [DESIRE.vaskeMeg]: {
-    id: DESIRE.vaskeMeg,
+  [GOAL.vaskeMeg]: {
+    id: GOAL.vaskeMeg,
     text: "Vaske og stelle meg",
     textDefinite: "vaske og stelle deg",
     hindrances: [
@@ -54,8 +54,8 @@ export const desires = {
       Hindrances.syn.id
     ]
   },
-  [DESIRE.kommeRundtHjemme]: {
-    id: DESIRE.kommeRundtHjemme,
+  [GOAL.kommeRundtHjemme]: {
+    id: GOAL.kommeRundtHjemme,
     text: "Komme meg rundt i mitt eget hjem",
     textDefinite: "komme deg rundt i eget hjem",
     hindrances: [
@@ -67,8 +67,8 @@ export const desires = {
       Hindrances.syn.id
     ]
   },
-  [DESIRE.kommeRundtUtenforHjemmet]: {
-    id: DESIRE.kommeRundtUtenforHjemmet,
+  [GOAL.kommeRundtUtenforHjemmet]: {
+    id: GOAL.kommeRundtUtenforHjemmet,
     text: "Komme meg fra A til B utenfor hjemmet",
     textDefinite: "komme deg fra A til B utenfor hjemmet",
     hindrances: [
@@ -84,8 +84,8 @@ export const desires = {
       Hindrances.hørsel.id
     ]
   },
-  [DESIRE.kollektivTransport]: {
-    id: DESIRE.kollektivTransport,
+  [GOAL.kollektivTransport]: {
+    id: GOAL.kollektivTransport,
     text: "Bruke kollektivtransport og drosje",
     textDefinite: "bruke kollektivtransport og drosje",
     hindrances: [
@@ -101,8 +101,8 @@ export const desires = {
       Hindrances.digitalKompetanse.id
     ]
   },
-  [DESIRE.handleMat]: {
-    id: DESIRE.handleMat,
+  [GOAL.handleMat]: {
+    id: GOAL.handleMat,
     text: "Handle mat og andre varer",
     textDefinite: "handle mat og andre varer",
     hindrances: [
@@ -117,8 +117,8 @@ export const desires = {
       Hindrances.digitalKompetanse.id
     ]
   },
-  [DESIRE.brukeInternett]: {
-    id: DESIRE.brukeInternett,
+  [GOAL.brukeInternett]: {
+    id: GOAL.brukeInternett,
     text:
       "Å bruke mobil, internett, f.eks. e-post, nettbank, Facebook e.l.",
     textDefinite:
@@ -131,8 +131,8 @@ export const desires = {
       Hindrances.digitalKompetanse.id
     ]
   },
-  [DESIRE.kontrollPenger]: {
-    id: DESIRE.kontrollPenger,
+  [GOAL.kontrollPenger]: {
+    id: GOAL.kontrollPenger,
     text: "Ha kontroll på pengene mine",
     textDefinite: "ha kontroll på pengene dine",
     hindrances: [
@@ -142,8 +142,8 @@ export const desires = {
       Hindrances.digitalKompetanse.id
     ]
   },
-  [DESIRE.deltaSamfunn]: {
-    id: DESIRE.deltaSamfunn,
+  [GOAL.deltaSamfunn]: {
+    id: GOAL.deltaSamfunn,
     text: "Å kunne delta i samfunnet og føle meg nyttig for andre",
     textDefinite: "kunne delta i samfunnet og føle deg nyttig for andre",
     hindrances: [
@@ -155,8 +155,8 @@ export const desires = {
       Hindrances.digitalKompetanse.id
     ]
   },
-  [DESIRE.vaskeHjemme]: {
-    id: DESIRE.vaskeHjemme,
+  [GOAL.vaskeHjemme]: {
+    id: GOAL.vaskeHjemme,
     text: "Holde orden hjemme",
     textDefinite: "holde orden hjemme",
     hindrances: [
@@ -168,8 +168,8 @@ export const desires = {
       Hindrances.syn.id
     ]
   },
-  [DESIRE.hobby]: {
-    id: DESIRE.hobby,
+  [GOAL.hobby]: {
+    id: GOAL.hobby,
     text: "Å ha noe å fylle dagen med, f.eks. en hobby",
     textDefinite: "ha noe å fylle dagen med, f.eks. en hobby",
     hindrances: [
@@ -181,8 +181,8 @@ export const desires = {
       Hindrances.digitalKompetanse.id
     ]
   },
-  [DESIRE.fysiskAktivitet]: {
-    id: DESIRE.fysiskAktivitet,
+  [GOAL.fysiskAktivitet]: {
+    id: GOAL.fysiskAktivitet,
     text: "Mosjonere og trene",
     textDefinite: "mosjonere og trene",
     hindrances: [
@@ -197,8 +197,8 @@ export const desires = {
       Hindrances.syn.id
     ]
   },
-  [DESIRE.sosialisere]: {
-    id: DESIRE.sosialisere,
+  [GOAL.sosialisere]: {
+    id: GOAL.sosialisere,
     text: "Være sammen med folk",
     textDefinite: "være sammen med folk",
     hindrances: [

@@ -2,10 +2,10 @@
 
 import { serviceList } from "../store/service.data";
 
-// first find elligible services meeting the users desire
-// get the base score (the rating for the desire)
+// first find elligible services meeting the users goal
+// get the base score (the rating for the goal)
 // and add the limitation score (meeting the users limitations)
-export const getElligibleServices = (desireId, limitations) => {
+export const getElligibleServices = (goalId, limitations) => {
   const selectedLimitations = limitations.filter(limit => {
     return limit.selected;
   });
@@ -13,8 +13,8 @@ export const getElligibleServices = (desireId, limitations) => {
   const formattedServices = serviceList
     .map(service => {
       let baseScore = 0;
-      if (service.desireRatings[desireId]) {
-        baseScore = service.desireRatings[desireId];
+      if (service.goalRatings[goalId]) {
+        baseScore = service.goalRatings[goalId];
       }
       const limitationScore = calculateScore(
         service,
@@ -26,7 +26,7 @@ export const getElligibleServices = (desireId, limitations) => {
       };
     })
     .map(service => {
-      let isElligible = desireId in service.desireRatings;
+      let isElligible = goalId in service.goalRatings;
       if (isElligible) {
         selectedLimitations.forEach(limit => {
           if (!service.limitationRatings[limit.id]) {

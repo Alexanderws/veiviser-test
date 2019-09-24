@@ -1,12 +1,13 @@
 $oslo-yellow: #F9C66B;
 $oslo-lime: #C7F6C9;
+$oslo-darkblue: #2A2859;
 
 .service-item {
     background-color: $oslo-yellow;
     padding: 16px;
     display: flex;
     flex-direction: column;
-    color: #FFF;
+    color: $oslo-darkblue;
 
     h4 {
         font-weight: 500;

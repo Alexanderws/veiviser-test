@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  font-size: 1.75rem;
+}
+
 .page-root {
   padding: 0 16px;
   max-width: 420px;

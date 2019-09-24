@@ -1,4 +1,4 @@
-import { desires } from "./desire.data";
+import { goals } from "./goal.data";
 import { Hindrances } from "./hindrance.data";
 
 export const serviceList = [
@@ -13,10 +13,10 @@ export const serviceList = [
       [Hindrances.balanse.id]: 0.5,
       [Hindrances.falle.id.id]: 0.1
     },
-    desireRatings: {
-      [desires.kommeRundtUtenforHjemmet.id]: 0.8,
-      [desires.handleMat.id]: 0.5,
-      [desires.kollektivTransport.id]: 0.5
+    goalRatings: {
+      [goals.kommeRundtUtenforHjemmet.id]: 0.8,
+      [goals.handleMat.id]: 0.5,
+      [goals.kollektivTransport.id]: 0.5
     }
   },
   {
@@ -29,10 +29,10 @@ export const serviceList = [
       [Hindrances.nedstemt.id]: 0.5,
       [Hindrances.angst.id]: 0.5
     },
-    desireRatings: {
-      [desires.sosialisere.id]: 0.8,
-      [desires.deltaSamfunn.id]: 0.2,
-      [desires.hobby.id]: 0.2
+    goalRatings: {
+      [goals.sosialisere.id]: 0.8,
+      [goals.deltaSamfunn.id]: 0.2,
+      [goals.hobby.id]: 0.2
     }
   },
   {
@@ -45,10 +45,10 @@ export const serviceList = [
       [Hindrances.nedstemt.id]: 0.5,
       [Hindrances.angst.id]: 0.5
     },
-    desireRatings: {
-      [desires.sosialisere.id]: 0.8,
-      [desires.deltaSamfunn.id]: 0.2,
-      [desires.hobby.id]: 0.2
+    goalRatings: {
+      [goals.sosialisere.id]: 0.8,
+      [goals.deltaSamfunn.id]: 0.2,
+      [goals.hobby.id]: 0.2
     }
   },
   {
@@ -61,10 +61,10 @@ export const serviceList = [
       [Hindrances.falle.id]: 0.7,
       [Hindrances.balanse.id]: 0.7
     },
-    desireRatings: {
-      [desires.sosialisere.id]: 0.5,
-      [desires.kommeRundtUtenforHjemmet.id]: 0.5,
-      [desires.fysiskAktivitet.id]: 0.8
+    goalRatings: {
+      [goals.sosialisere.id]: 0.5,
+      [goals.kommeRundtUtenforHjemmet.id]: 0.5,
+      [goals.fysiskAktivitet.id]: 0.8
     }
   },
   {
@@ -77,10 +77,10 @@ export const serviceList = [
       [Hindrances.syn.id]: 0.4,
       [Hindrances.balanse.id]: 0.5
     },
-    desireRatings: {
-      [desires.hobby.id]: 0.6,
-      [desires.sosialisere.id]: 0.7,
-      [desires.fysiskAktivitet.id]: 0.7
+    goalRatings: {
+      [goals.hobby.id]: 0.6,
+      [goals.sosialisere.id]: 0.7,
+      [goals.fysiskAktivitet.id]: 0.7
     }
   },
   {
@@ -93,12 +93,12 @@ export const serviceList = [
       [Hindrances.smerter.id]: 0.5,
       [Hindrances.balanse.id]: 0.6
     },
-    desireRatings: {
-      [desires.kommeRundtHjemme.id]: 0.8,
-      [desires.handleMat.id]: 0.3,
-      [desires.kommeRundtUtenforHjemmet.id]: 0.5,
-      [desires.vaskeMeg.id]: 0.4,
-      [desires.kleMeg.id]: 0.2
+    goalRatings: {
+      [goals.kommeRundtHjemme.id]: 0.8,
+      [goals.handleMat.id]: 0.3,
+      [goals.kommeRundtUtenforHjemmet.id]: 0.5,
+      [goals.vaskeMeg.id]: 0.4,
+      [goals.kleMeg.id]: 0.2
     }
   },
   {
@@ -110,10 +110,10 @@ export const serviceList = [
       [Hindrances.angst.id]: 0.9,
       [Hindrances.nedstemt.id]: 0.6
     },
-    desireRatings: {
-      [desires.deltaSamfunn.id]: 0.3,
-      [desires.hobby.id]: 0.1,
-      [desires.sosialisere.id]: 0.2
+    goalRatings: {
+      [goals.deltaSamfunn.id]: 0.3,
+      [goals.hobby.id]: 0.1,
+      [goals.sosialisere.id]: 0.2
     }
   },
   {
@@ -124,11 +124,11 @@ export const serviceList = [
       [Hindrances.nedstemt.id]: 0.1,
       [Hindrances.angst.id]: 0.1
     },
-    desireRatings: {
-      [desires.lageMat.id]: 0.2,
-      [desires.deltaSamfunn.id]: 0.6,
-      [desires.hobby.id]: 0.4,
-      [desires.sosialisere.id]: 0.8
+    goalRatings: {
+      [goals.lageMat.id]: 0.2,
+      [goals.deltaSamfunn.id]: 0.6,
+      [goals.hobby.id]: 0.4,
+      [goals.sosialisere.id]: 0.8
     }
   },
   {
@@ -139,10 +139,10 @@ export const serviceList = [
       [Hindrances.nedstemt.id]: 0.1,
       [Hindrances.angst.id]: 0.1
     },
-    desireRatings: {
-      [desires.deltaSamfunn.id]: 0.7,
-      [desires.hobby.id]: 0.7,
-      [desires.sosialisere.id]: 0.8
+    goalRatings: {
+      [goals.deltaSamfunn.id]: 0.7,
+      [goals.hobby.id]: 0.7,
+      [goals.sosialisere.id]: 0.8
     }
   },
   {
@@ -153,11 +153,11 @@ export const serviceList = [
       [Hindrances.nedstemt.id]: 0.1,
       [Hindrances.angst.id]: 0.1
     },
-    desireRatings: {
-      [desires.deltaSamfunn.id]: 0.6,
-      [desires.hobby.id]: 0.6,
-      [desires.sosialisere.id]: 0.8,
-      [desires.fysiskAktivitet.id]: 0.9
+    goalRatings: {
+      [goals.deltaSamfunn.id]: 0.6,
+      [goals.hobby.id]: 0.6,
+      [goals.sosialisere.id]: 0.8,
+      [goals.fysiskAktivitet.id]: 0.9
     }
   },
   {
@@ -172,8 +172,8 @@ export const serviceList = [
       [Hindrances.balanse.id]: 0.4,
       [Hindrances.nedstemt.id]: 0.2
     },
-    desireRatings: {
-      [desires.handleMat.id]: 0.5
+    goalRatings: {
+      [goals.handleMat.id]: 0.5
     }
   },
   {
@@ -187,10 +187,10 @@ export const serviceList = [
       [Hindrances.nedstemt.id]: 0.2,
       [Hindrances.angst.id]: 0.1
     },
-    desireRatings: {
-      [desires.hobby.id]: 0.6,
-      [desires.sosialisere.id]: 0.9,
-      [desires.lageMat.id]: 0.4
+    goalRatings: {
+      [goals.hobby.id]: 0.6,
+      [goals.sosialisere.id]: 0.9,
+      [goals.lageMat.id]: 0.4
     }
   },
   {
@@ -203,14 +203,14 @@ export const serviceList = [
       [Hindrances.nedstemt.id]: 0.6,
       [Hindrances.angst.id]: 0.4
     },
-    desireRatings: {
-      [desires.hobby.id]: 0.5,
-      [desires.sosialisere.id]: 0.7,
-      [desires.lageMat.id]: 0.6,
-      [desires.fysiskAktivitet.id]: 0.7,
-      [desires.kleMeg.id]: 0.2,
-      [desires.kontrollPenger.id]: 0.2,
-      [desires.brukeInternett.id]: 0.1
+    goalRatings: {
+      [goals.hobby.id]: 0.5,
+      [goals.sosialisere.id]: 0.7,
+      [goals.lageMat.id]: 0.6,
+      [goals.fysiskAktivitet.id]: 0.7,
+      [goals.kleMeg.id]: 0.2,
+      [goals.kontrollPenger.id]: 0.2,
+      [goals.brukeInternett.id]: 0.1
     }
   },
   {
@@ -222,10 +222,10 @@ export const serviceList = [
       [Hindrances.balanse.id]: 0.3,
       [Hindrances.smerter.id]: 0.6
     },
-    desireRatings: {
-      [desires.kommeRundtHjemme.id]: 0.6,
-      [desires.kommeRundtUtenforHjemmet.id]: 0.4,
-      [desires.fysiskAktivitet.id]: 0.2
+    goalRatings: {
+      [goals.kommeRundtHjemme.id]: 0.6,
+      [goals.kommeRundtUtenforHjemmet.id]: 0.4,
+      [goals.fysiskAktivitet.id]: 0.2
     }
   },
   {
@@ -239,11 +239,11 @@ export const serviceList = [
       [Hindrances.angst.id]: 0.4,
       [Hindrances.falle.id]: 0.3
     },
-    desireRatings: {
-      [desires.kommeRundtHjemme.id]: 0.3,
-      [desires.kommeRundtUtenforHjemmet.id]: 0.5,
-      [desires.fysiskAktivitet.id]: 0.2,
-      [desires.kollektivTransport.id]: 0.3
+    goalRatings: {
+      [goals.kommeRundtHjemme.id]: 0.3,
+      [goals.kommeRundtUtenforHjemmet.id]: 0.5,
+      [goals.fysiskAktivitet.id]: 0.2,
+      [goals.kollektivTransport.id]: 0.3
     }
   }
 ];

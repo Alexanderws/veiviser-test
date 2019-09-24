@@ -4,17 +4,27 @@ import "./nav-button.styles.scss";
 
 import { ReactComponent as ArrowRight } from "../../assets/chevron-right.svg";
 
-// Types: primary, secondary, start
-
-const NavButton = ({ children, secondary, wide, ...otherProps }) => {
+const NavButton = ({
+  children,
+  secondary,
+  wide,
+  option,
+  ...otherProps
+}) => {
   return (
     <button
       className={`nav-button${secondary ? " secondary" : ""}${
         wide ? " wide" : ""
-      }`}
+      }${option ? " option" : ""}`}
       {...otherProps}
     >
-      {arrow ? <ArrowRight className="arrow" /> : ""}
+      {option ? (
+        <div className="arrow">
+          <ArrowRight />
+        </div>
+      ) : (
+        ""
+      )}
       {children}
     </button>
   );

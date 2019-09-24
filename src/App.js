@@ -4,16 +4,16 @@ import { Switch, Route, withRouter } from "react-router-dom";
 import Header from "./components/header/header.component";
 import Footer from "./components/footer/footer.component";
 import StartPage from "./pages/start/start.component";
-import DesirePage from "./pages/desire/desire.component";
+import GoalPage from "./pages/goal/goal.component";
 import HindrancePage from "./pages/hindrance/hindrance.component";
 import ResultPage from "./pages/result/result.component";
 
-import { desires } from "./store/desire.data";
+import { goals } from "./store/goal.data";
 import { getElligibleServices } from "./utils/service-recommendation";
 import { hindranceList } from "./store/hindrance.data";
 import "./App.css";
 
-const DESIRE_INTITIAL_STATE = desires.kleMeg;
+const DESIRE_INTITIAL_STATE = goals.kleMeg;
 const HINDRANCES_INITAL_STATE = hindranceList.map(hindrance => {
   return {
     id: hindrance.id,
@@ -24,7 +24,7 @@ const HINDRANCES_INITAL_STATE = hindranceList.map(hindrance => {
 });
 
 const App = withRouter(({ location }) => {
-  const [isHindranceFirst, setHindranceFirst] = useState(true);
+  const [isHindranceFirst, setHindranceFirst] = useState(false);
   const [userDesire, setDesire] = useState(DESIRE_INTITIAL_STATE);
   const [userHindrances, setHindrances] = useState(
     HINDRANCES_INITAL_STATE
@@ -39,15 +39,17 @@ const App = withRouter(({ location }) => {
     setHindrances(HINDRANCES_INITAL_STATE);
   };
 
-  const handleDesireChange = event => {
-    setDesire(desires[event.target.value]);
+  const handleDesireChange = id => {
+    setDesire(goals[id]);
   };
 
   const handleDesireLeave = () => {
+    console.log("handleDesireLeave");
     updateHindrances();
   };
 
   const updateHindrances = () => {
+    console.log("updateHindrances");
     if (!isHindranceFirst) {
       setHindrances(prevState => {
         return prevState.map(hindrance => {
@@ -64,6 +66,7 @@ const App = withRouter(({ location }) => {
   };
 
   const handleHindranceChange = newHindrance => {
+    console.log("handleHindranceChange");
     setHindrances(prevState => {
       return prevState.map(hindrance => {
         if (hindrance.id === newHindrance) {
@@ -83,13 +86,13 @@ const App = withRouter(({ location }) => {
   const getNextPath = fromLocation => {
     switch (fromLocation) {
       case "start":
-        return isHindranceFirst ? "/hindrance" : "/desire";
-      case "desire":
+        return isHindranceFirst ? "/hindrance" : "/goal";
+      case "goal":
         return isHindranceFirst ? "/result" : "/hindrance";
       case "hindrance":
-        return isHindranceFirst ? "/desire" : "/result";
+        return isHindranceFirst ? "/goal" : "/result";
       case "result":
-        return isHindranceFirst ? "/hindrance" : "/desire";
+        return isHindranceFirst ? "/hindrance" : "/goal";
       default:
         return "/";
     }
@@ -108,10 +111,10 @@ const App = withRouter(({ location }) => {
         />
         <Route
           exact
-          path="/desire"
+          path="/goal"
           render={props => (
-            <DesirePage
-              nextPath={getNextPath("desire")}
+            <GoalPage
+              nextPath={getNextPath("goal")}
               activeDesire={userDesire}
               onDesireLeave={handleDesireLeave}
               onDesireChange={handleDesireChange}
