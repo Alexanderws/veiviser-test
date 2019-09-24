@@ -4,12 +4,7 @@ import NavButton from "../../components/nav-button/nav-button.component";
 import { goals } from "../../store/goal.data";
 import "./goal.styles.scss";
 
-const GoalPage = ({
-  onDesireChange,
-  onDesireLeave,
-  nextPath = "",
-  history
-}) => {
+const GoalPage = ({ onDesireChange, nextPath = "", history }) => {
   return (
     <div className="page-root">
       <h2>Hva ønsker du å oppnå?</h2>
@@ -22,7 +17,6 @@ const GoalPage = ({
               key={goals[key].id}
               value={goals[key].id}
               onClick={() => {
-                onDesireLeave();
                 onDesireChange(goals[key].id);
                 history.push(nextPath);
               }}

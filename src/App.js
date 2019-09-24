@@ -24,15 +24,15 @@ const HINDRANCES_INITAL_STATE = hindranceList.map(hindrance => {
 });
 
 const App = withRouter(({ location }) => {
-  const [isHindranceFirst, setHindranceFirst] = useState(false);
   const [userDesire, setDesire] = useState(DESIRE_INTITIAL_STATE);
   const [userHindrances, setHindrances] = useState(
     HINDRANCES_INITAL_STATE
   );
 
   useEffect(() => {
-    window.scrollTo(0, 40);
-  }, [location.pathname]);
+    console.log("useEffect", userDesire);
+    updateHindrances();
+  }, [userDesire]);
 
   const resetState = () => {
     setDesire(DESIRE_INTITIAL_STATE);
@@ -41,32 +41,26 @@ const App = withRouter(({ location }) => {
 
   const handleDesireChange = id => {
     setDesire(goals[id]);
-  };
-
-  const handleDesireLeave = () => {
-    console.log("handleDesireLeave");
-    updateHindrances();
+    console.log("handleDesireChange", userDesire);
   };
 
   const updateHindrances = () => {
     console.log("updateHindrances");
-    if (!isHindranceFirst) {
-      setHindrances(prevState => {
-        return prevState.map(hindrance => {
-          const relatedHindrances = userDesire.hindrances;
+    setHindrances(prevState => {
+      return prevState.map(hindrance => {
+        const relatedHindrances = userDesire.hindrances;
+        console.log("userDesire", userDesire.id);
 
-          if (relatedHindrances.includes(hindrance.id)) {
-            return { ...hindrance, disabled: false };
-          } else {
-            return { ...hindrance, disabled: true };
-          }
-        });
+        if (relatedHindrances.includes(hindrance.id)) {
+          return { ...hindrance, disabled: false };
+        } else {
+          return { ...hindrance, disabled: true };
+        }
       });
-    }
+    });
   };
 
   const handleHindranceChange = newHindrance => {
-    console.log("handleHindranceChange");
     setHindrances(prevState => {
       return prevState.map(hindrance => {
         if (hindrance.id === newHindrance) {
@@ -78,45 +72,21 @@ const App = withRouter(({ location }) => {
     });
   };
 
-  const handleTestModeChange = () => {
-    setHindranceFirst(prevState => !prevState);
-    resetState();
-  };
-
-  const getNextPath = fromLocation => {
-    switch (fromLocation) {
-      case "start":
-        return isHindranceFirst ? "/hindrance" : "/goal";
-      case "goal":
-        return isHindranceFirst ? "/result" : "/hindrance";
-      case "hindrance":
-        return isHindranceFirst ? "/goal" : "/result";
-      case "result":
-        return isHindranceFirst ? "/hindrance" : "/goal";
-      default:
-        return "/";
-    }
-  };
-
   return (
     <React.Fragment>
-      <Header isHindranceFirst={isHindranceFirst} />
       <Switch>
         <Route
           exact
           path="/"
-          render={props => (
-            <StartPage nextPath={getNextPath("start")} {...props} />
-          )}
+          render={props => <StartPage nextPath={"goal"} {...props} />}
         />
         <Route
           exact
           path="/goal"
           render={props => (
             <GoalPage
-              nextPath={getNextPath("goal")}
+              nextPath={"hindrance"}
               activeDesire={userDesire}
-              onDesireLeave={handleDesireLeave}
               onDesireChange={handleDesireChange}
               {...props}
             />
@@ -128,8 +98,7 @@ const App = withRouter(({ location }) => {
           render={props => (
             <HindrancePage
               userDesire={userDesire}
-              nextPath={getNextPath("hindrance")}
-              isHindranceFirst={isHindranceFirst}
+              nextPath={"result"}
               hindrances={userHindrances}
               onHindranceChange={handleHindranceChange}
               {...props}
@@ -141,7 +110,7 @@ const App = withRouter(({ location }) => {
           path="/result"
           render={props => (
             <ResultPage
-              nextPath={getNextPath("result")}
+              nextPath={"goal"}
               serviceList={getElligibleServices(
                 userDesire.id,
                 userHindrances
@@ -151,7 +120,6 @@ const App = withRouter(({ location }) => {
           )}
         />
       </Switch>
-      <Footer onTestModeChange={handleTestModeChange} />
     </React.Fragment>
   );
 });

@@ -13,19 +13,14 @@ const HindrancePage = ({
   hindrances,
   onHindranceChange,
   nextPath = "",
-  isHindranceFirst,
   userDesire,
   history
 }) => {
   return (
     <div className="page-root">
-      <h2>{`${
-        isHindranceFirst
-          ? "Hvilke hindringer opplever du i hverdagen?"
-          : "Er det noe som gjør det vanskelig å " +
-            userDesire.textDefinite +
-            "?"
-      }`}</h2>
+      <h2>{`${"Er det noe som gjør det vanskelig å " +
+        userDesire.textDefinite +
+        "?"}`}</h2>
 
       <div className="form-column">
         <FormControl>
