@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7e6c333b8a28da063d3ceb1cfc4708d4",
+    "revision": "19e0d558e98d043d82e1242a93c4473a",
     "url": "/veiviser-test/index.html"
   },
   {
-    "revision": "afd8e7d29d3bb802c4f8",
-    "url": "/veiviser-test/static/css/main.2275331e.chunk.css"
+    "revision": "8842cfce581506d5451d",
+    "url": "/veiviser-test/static/css/main.7407dce3.chunk.css"
   },
   {
     "revision": "f07cd6eb14e74bfc7ce6",
     "url": "/veiviser-test/static/js/2.aaa63749.chunk.js"
   },
   {
-    "revision": "afd8e7d29d3bb802c4f8",
+    "revision": "8842cfce581506d5451d",
     "url": "/veiviser-test/static/js/main.b95ab0d4.chunk.js"
   },
   {
