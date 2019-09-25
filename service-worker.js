@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/veiviser-test/precache-manifest.4d97ead058dea5dbebd3354fd1862bf8.js"
+  "/veiviser-test/precache-manifest.05c57393e5f4b0cbe022becbc0540cc1.js"
 );
 
 self.addEventListener('message', (event) => {
