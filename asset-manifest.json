@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/veiviser-test/static/css/main.fd8fc292.chunk.css",
-    "main.js": "/veiviser-test/static/js/main.4122a29f.chunk.js",
-    "main.js.map": "/veiviser-test/static/js/main.4122a29f.chunk.js.map",
+    "main.css": "/veiviser-test/static/css/main.b56b82ef.chunk.css",
+    "main.js": "/veiviser-test/static/js/main.b648956b.chunk.js",
+    "main.js.map": "/veiviser-test/static/js/main.b648956b.chunk.js.map",
     "runtime~main.js": "/veiviser-test/static/js/runtime~main.f5bc01ef.js",
     "runtime~main.js.map": "/veiviser-test/static/js/runtime~main.f5bc01ef.js.map",
     "static/js/2.aaa63749.chunk.js": "/veiviser-test/static/js/2.aaa63749.chunk.js",
     "static/js/2.aaa63749.chunk.js.map": "/veiviser-test/static/js/2.aaa63749.chunk.js.map",
     "index.html": "/veiviser-test/index.html",
-    "precache-manifest.c01c23e8555fb25c6513307fd9e4d581.js": "/veiviser-test/precache-manifest.c01c23e8555fb25c6513307fd9e4d581.js",
+    "precache-manifest.506e31127e0322b959cfa819532d7b52.js": "/veiviser-test/precache-manifest.506e31127e0322b959cfa819532d7b52.js",
     "service-worker.js": "/veiviser-test/service-worker.js",
-    "static/css/main.fd8fc292.chunk.css.map": "/veiviser-test/static/css/main.fd8fc292.chunk.css.map",
+    "static/css/main.b56b82ef.chunk.css.map": "/veiviser-test/static/css/main.b56b82ef.chunk.css.map",
     "static/media/Oslo-logo-morkeblaa-RGB.92caa571.svg": "/veiviser-test/static/media/Oslo-logo-morkeblaa-RGB.92caa571.svg",
     "static/media/chevron-right.f9f1a7e0.svg": "/veiviser-test/static/media/chevron-right.f9f1a7e0.svg"
   }
